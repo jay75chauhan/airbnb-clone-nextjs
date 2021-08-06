@@ -17,7 +17,7 @@ export default function Home({ session, exploreData, cardsData }) {
   }
 
   return (
-    <div>
+    <div className="bg-gray-100">
       <Head>
         <title>Airbnb</title>
         <link
@@ -31,7 +31,7 @@ export default function Home({ session, exploreData, cardsData }) {
       {/* Banner */}
       <Banner />
 
-      <main className="max-w-7xl mx-auto px-8 sm:px-16">
+      <main className="max-w-7xl bg-gray-50 mx-auto shadow px-8 my-7 rounded-lg sm:px-16">
         <section className="pt-6">
           <h2 className="text-4xl font-semibold pb-5">Explore Nearby</h2>
 

@@ -23,7 +23,7 @@ function Login() {
       </div>
 
       <div className="bg-transparent   backdrop-blur-2xl z-20  shadow-2xl  rounded-3xl items-center justify-center p-12 sm:p-24  ">
-        <div className=" flex hover:animate-spin  items-center justify-center">
+        <div className=" flex hover:animate-bounce  items-center justify-center">
           <Image
             src="https://image.flaticon.com/icons/png/512/2111/2111320.png"
             height={150}
@@ -39,7 +39,7 @@ function Login() {
             Login with{" "}
           </button>
           <a
-            class=" mt-4  pl-32 text-gray-200 hover:text-gray-300 hover:underline no-underline md:hover:underline text-xs"
+            className=" mt-4  pl-32 text-gray-200 hover:text-gray-300 hover:underline no-underline md:hover:underline text-xs"
             href="https://github.com/jay75chauhan"
             target="_blank"
           >
