@@ -7,8 +7,10 @@ import {
   UserCircleIcon,
   UserIcon,
 } from "@heroicons/react/solid";
+import { signOut, useSession } from "next-auth/client";
 
 function Header() {
+  const [session, loading] = useSession();
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10   ">
       {/* left */}
@@ -33,13 +35,23 @@ function Header() {
       {/* Rigt */}
       <div className="flex items-center justify-end text-gray-500  space-x-4">
         <p className="hidden md:inline cursor-pointer hover:underline">
-          Become a host
+          Hii {session.user.name}
         </p>
-        <GlobeAltIcon className="h-6" />
+        <GlobeAltIcon className="h-6 animate-spin text-blue-400" />
 
-        <div className="flex items-center justify-center cursor-pointer duration-500 hover:scale-105 space-x-2 border-2 p-2 rounded-full">
+        <div
+          onClick={() => signOut()}
+          className="flex items-center justify-center cursor-pointer duration-500 hover:scale-105 space-x-2 border-2 p-2 rounded-full"
+        >
           <MenuIcon className="h-6" />
-          <UserCircleIcon className="h-6" />
+          <Image
+            src={session.user.image}
+            onClick={signOut}
+            className="rounded-full  "
+            width="30"
+            height="30"
+            layout="fixed"
+          />
         </div>
       </div>
     </header>
