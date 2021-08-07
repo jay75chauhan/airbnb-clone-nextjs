@@ -10,4 +10,9 @@ module.exports = {
       "lh3.googleusercontent.com",
     ],
   },
+
+  env: {
+    mapbox_key:
+      "pk.eyJ1IjoiamF5NzVjaGF1aGFuIiwiYSI6ImNrczFqZjduYTA0NDMydnBmandxZThjNjUifQ.9siLndUHBjD12AuIcbc_fA",
+  },
 };

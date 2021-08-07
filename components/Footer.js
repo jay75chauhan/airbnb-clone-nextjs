@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="grid border-t grid-cols-1 md:grid-cols-4 gap-y-10 px-32 py-14 bg-gray-100 text-gray-600 shadow">
+    <div className="grid border-t grid-cols-1 md:grid-cols-4 gap-y-10 px-32 py-14 bg-gray-200 text-gray-600 shadow">
       <div className="space-y-4 text-xs text-gray-800">
         <h5 className="font-bold">ABOUT</h5>
         <p>How Airbnd works</p>

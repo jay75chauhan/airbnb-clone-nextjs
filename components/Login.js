@@ -19,11 +19,12 @@ function Login() {
           src="https://images.unsplash.com/photo-1585517342886-1f076085742a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1934&q=80"
           layout="fill"
           object-fit="contain"
+          loading="eager"
         />
       </div>
 
       <div className="bg-transparent   backdrop-blur-2xl z-20  shadow-2xl  rounded-3xl items-center justify-center p-12 sm:p-24  ">
-        <div className=" flex hover:animate-bounce  items-center justify-center">
+        <div className=" flex hover:animate-spin  items-center justify-center">
           <Image
             src="https://image.flaticon.com/icons/png/512/2111/2111320.png"
             height={150}

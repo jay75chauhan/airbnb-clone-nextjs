@@ -48,7 +48,7 @@ function Header({ placeholder }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10   ">
+    <header className="sticky  top-0 z-50 grid grid-cols-3 bg-transparent backdrop-blur-3xl shadow-md p-5 md:px-10   ">
       {/* left */}
       <div
         onClick={() => router.push("/")}
@@ -96,7 +96,7 @@ function Header({ placeholder }) {
         </div>
       </div>
       {searchInput && (
-        <div className="flex flex-col  mx-auto col-span-3 mt-2  shadow-lg">
+        <div className="flex flex-col  mx-auto col-span-3 mt-2 bg-white shadow-lg">
           <DateRangePicker
             ranges={[selectionRange]}
             minDate={new Date()}
@@ -104,7 +104,7 @@ function Header({ placeholder }) {
             onChange={handleSelect}
             className="w-40 md:w-full"
           />
-          <div className="flex items-center border-b px-5 ">
+          <div className="flex  items-center border-b px-5 ">
             <h2 className="text-2xl  flex-grow font-semibold">
               Number of Guests
             </h2>
@@ -117,7 +117,7 @@ function Header({ placeholder }) {
               className="w-12 pl-2 text-lg outline-none text-red-400"
             />
           </div>
-          <div className="flex my-4 ">
+          <div className="flex my-4   ">
             <button
               onClick={() => {
                 setSearchInput("");
