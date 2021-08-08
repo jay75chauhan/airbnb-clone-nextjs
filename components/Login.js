@@ -35,7 +35,7 @@ function Login() {
         <div className="flex flex-col   mt-12">
           <button
             onClick={signIn}
-            className=" py-3 backdrop-blur-3xl hover:bg-red-400  text-xl  bg-transparent border-2 border-gray-300 shadow-inner  font-medium hover:text-gray-100 transition  transform duration-500 ease-in-out hover:scale-105 hover:shadow-2xl     rounded-full text-gray-300 text-center cursor-pointer"
+            className=" py-3 backdrop-blur-3xl hover:bg-[#FD5B5F]  text-xl  bg-transparent border-2 border-gray-300 shadow-inner  font-medium hover:text-gray-100 transition  active:scale-95 hover:shadow-2xl     rounded-full text-gray-300 text-center cursor-pointer"
           >
             Login with{" "}
           </button>
