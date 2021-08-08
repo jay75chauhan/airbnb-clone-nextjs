@@ -8,6 +8,7 @@
   "dependencies": {
     "@badrap/bar-of-progress": "^0.1.2",
     "@heroicons/react": "^1.0.3",
+    "@next-auth/firebase-adapter": "^0.1.2",
     "date-fns": "^2.23.0",
     "geolib": "^3.3.1",
     "next": "latest",
