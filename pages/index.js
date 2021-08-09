@@ -29,7 +29,12 @@ export default function Home({ session, exploreData, cardsData }) {
       {/* Header */}
       <Header />
       {/* Banner */}
-      <Banner />
+      <Banner
+        img={
+          "https://a0.muscache.com/im/pictures/e4a2a61c-589f-4e49-b3b8-968a6bc23389.jpg?im_w=2560"
+        }
+        text=" Olympian & Paralympian Online Experiences"
+      />
 
       <main className="max-w-7xl bg-gray-50 mx-auto shadow px-8 my-7 rounded-lg sm:px-16">
         <section className="pt-6">

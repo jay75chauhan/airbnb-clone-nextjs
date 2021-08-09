@@ -2,19 +2,15 @@ import React from "react";
 import Image from "next/image";
 import Fade from "react-reveal/Fade";
 
-function Banner() {
+function Banner({ img, text }) {
   return (
-    <div className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] ">
-      <Image
-        src="https://a0.muscache.com/im/pictures/e4a2a61c-589f-4e49-b3b8-968a6bc23389.jpg?im_w=2560"
-        layout="fill"
-        objectFit="cover"
-      />
+    <div className="relative   -mt-32 h-[450px] sm:h-[450px] md:h-[500px] lg:h-[600px] ">
+      <Image src={img} layout="fill" objectFit="cover" />
 
       <Fade bottom>
-        <div className="absolute md:left-16 md:top-[100px] w-full top-2 text-center lg:text-left  md:w-96 ">
+        <div className="absolute md:left-16 md:top-[200px] w-full top-32 text-center lg:text-left  md:w-96 ">
           <p className="text-lg md:text-4xl lg:text-6xl  text-center lg:text-left mx-20 md:mx-0  font-bold  text-white">
-            Olympian & Paralympian Online Experiences
+            {text}
           </p>
           <button className="text-sm text text-black bg-white px-4 py-2 rounded-lg mt-5 lg:mt-8 lg: cursor-pointer font-medium">
             Exolire now

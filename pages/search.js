@@ -6,6 +6,9 @@ import { format } from "date-fns";
 import { useRouter } from "next/dist/client/router";
 import InfoCard from "../components/InfoCard";
 import Map from "../components/Map";
+import Banner from "../components/Banner";
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 function Search({ searchResults }) {
   const router = useRouter();
@@ -26,6 +29,12 @@ function Search({ searchResults }) {
         />
       </Head>
       <Header placeholder={`${location} | ${range} | ${nOfGuests} guests`} />
+      <Banner
+        img={
+          "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1934&q=80"
+        }
+        text="explore the new world..."
+      />
 
       <main className="flex border-b-2 bg-gray-50">
         <section className="flex-grow pt-14 px-6">
@@ -43,27 +52,30 @@ function Search({ searchResults }) {
             <p className="button">Rooms and Beds</p>
             <p className="button">More filters</p>
           </div>
-          <div className="flex flex-col border-t-2">
-            {searchResults.map(
-              ({ img, location, title, description, star, price, total }) => (
-                <InfoCard
-                  key={img}
-                  img={img}
-                  location={location}
-                  title={title}
-                  description={description}
-                  star={star}
-                  price={price}
-                  total={total}
-                />
-              )
-            )}
-          </div>
+          <Fade left>
+            <div className="flex flex-col border-t-2">
+              {searchResults.map(
+                ({ img, location, title, description, star, price, total }) => (
+                  <InfoCard
+                    key={img}
+                    img={img}
+                    location={location}
+                    title={title}
+                    description={description}
+                    star={star}
+                    price={price}
+                    total={total}
+                  />
+                )
+              )}
+            </div>
+          </Fade>
         </section>
-
-        <section className="hidden xl:inline-flex xl:min-w-[600px]">
-          <Map searchResults={searchResults}/>
-        </section>
+        <Zoom>
+          <section className="hidden xl:inline-flex m-4 mt-56 shadow-2xl rounded-md xl:min-w-[600px]">
+            <Map searchResults={searchResults} />
+          </section>
+        </Zoom>
       </main>
 
       <Footer />

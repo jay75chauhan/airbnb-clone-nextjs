@@ -48,11 +48,11 @@ function Header({ placeholder }) {
   };
 
   return (
-    <header className="sticky  top-0 z-50 grid grid-cols-3 bg-transparent backdrop-blur-3xl shadow-md p-5 md:px-10   ">
+    <header className="sticky  top-0 z-50 grid grid-cols-3 bg-transparent backdrop-blur-sm shadow-md p-5 md:px-10   ">
       {/* left */}
       <div
         onClick={() => router.push("/")}
-        className="relative flex  items-center md:h-10 h-6 cursor-pointer my-auto "
+        className="relative flex items-center md:h-10 h-6 cursor-pointer my-auto "
       >
         <Image
           src="https://links.papareact.com/qd3"
@@ -70,11 +70,11 @@ function Header({ placeholder }) {
           placeholder={placeholder || "Start your search ?"}
           className="pl-5 bg-transparent outline-none flex-grow text-xs md:text-sm text-gray-600 placeholder-gray-400"
         />
-        <SearchIcon className="h-8 bg-red-400 hidden hover:animate-spin md:inline-flex text-white rounded-full  cursor-pointer shadow p-2 md:mx-2" />
+        <SearchIcon className="h-8  bg-red-400 hidden hover:animate-spin md:inline-flex text-white rounded-full  cursor-pointer shadow p-2 md:mx-2" />
       </div>
 
       {/* Rigt */}
-      <div className="flex items-center justify-end text-gray-500  space-x-4">
+      <div className="flex items-center justify-end text-gray-900  space-x-4">
         <p className="hidden md:inline cursor-pointer hover:underline">
           Hii {session.user.name}
         </p>
@@ -82,9 +82,9 @@ function Header({ placeholder }) {
 
         <div
           onClick={() => signOut()}
-          className="flex items-center justify-center cursor-pointer duration-500 hover:scale-105 space-x-2 border-2 p-2 rounded-full"
+          className="flex items-center  border-gray-400 justify-center cursor-pointer duration-500 hover:scale-105 space-x-2 border-2 p-2 rounded-full"
         >
-          <MenuIcon className="h-6" />
+          <MenuIcon className="h-6 text-gray-500 " />
           <Image
             src={session.user.image}
             onClick={signOut}
@@ -96,7 +96,7 @@ function Header({ placeholder }) {
         </div>
       </div>
       {searchInput && (
-        <div className="flex flex-col  mx-auto col-span-3 mt-2 bg-white shadow-lg">
+        <div className="flex flex-col z-50 absolute top-24 left-1/3   col-span-3 mt-2 bg-white shadow-lg">
           <DateRangePicker
             ranges={[selectionRange]}
             minDate={new Date()}
