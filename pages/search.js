@@ -86,7 +86,7 @@ function Search({ searchResults }) {
 export default Search;
 
 export async function getServerSideProps() {
-  const searchResults = await fetch("https://links.papareact.com/isz").then(
+  const searchResults = await fetch("https://www.jsonkeeper.com/b/5NPS").then(
     (res) => res.json()
   );
 

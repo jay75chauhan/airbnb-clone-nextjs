@@ -12,7 +12,7 @@ import Bounce from "react-reveal/Bounce";
 import { getSession } from "next-auth/client";
 
 export default function Home({ session, exploreData, cardsData }) {
-  if (!session) {
+  if (session) {
     return <Login />;
   }
 
@@ -22,7 +22,7 @@ export default function Home({ session, exploreData, cardsData }) {
         <title>Airbnb</title>
         <link
           rel="icon"
-          href="https://image.flaticon.com/icons/png/512/2111/2111320.png"
+          href="https://cdn-icons-png.flaticon.com/512/2111/2111283.png"
         />
       </Head>
 
@@ -92,12 +92,12 @@ export async function getServerSideProps(context) {
   //get user
   const session = await getSession(context);
 
-  const exploreData = await fetch("https://links.papareact.com/pyp").then(
+  const exploreData = await fetch("https://www.jsonkeeper.com/b/4G1G").then(
     (res) => res.json()
   );
 
-  const cardsData = await fetch("https://links.papareact.com/zp1").then((res) =>
-    res.json()
+  const cardsData = await fetch("https://www.jsonkeeper.com/b/VHHT").then(
+    (res) => res.json()
   );
 
   return {

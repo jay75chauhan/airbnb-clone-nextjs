@@ -26,7 +26,7 @@ function Login() {
       <div className="bg-transparent   backdrop-blur-2xl z-20  shadow-2xl  rounded-3xl items-center justify-center p-12 sm:p-24  ">
         <div className=" flex hover:animate-spin  items-center justify-center">
           <Image
-            src="https://image.flaticon.com/icons/png/512/2111/2111320.png"
+            src="https://cdn-icons-png.flaticon.com/512/2111/2111283.png"
             height={150}
             width={150}
             object-fit="contain"

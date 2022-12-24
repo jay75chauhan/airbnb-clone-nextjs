@@ -11,7 +11,7 @@ module.exports = withPWA({
     domains: [
       "links.papareact.com",
       "a0.muscache.com",
-      "image.flaticon.com",
+      "cdn-icons-png.flaticon.com",
       "firebasestorage.googleapis.com",
       "accounts.google.com",
       "images.unsplash.com",

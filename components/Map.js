@@ -37,7 +37,7 @@ function Map({ searchResults }) {
         <div key={result.long}>
           <Marker longitude={result.long} latitude={result.lat}>
             <img
-              src="https://image.flaticon.com/icons/png/512/2111/2111283.png"
+              src="https://image.flaticon.com/icons/png/512/2111/2111320.png"
               height={25}
               width={25}
               object-fit="contain "
