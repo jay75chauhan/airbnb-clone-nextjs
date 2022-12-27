@@ -12,7 +12,7 @@ import Bounce from "react-reveal/Bounce";
 import { getSession } from "next-auth/client";
 
 export default function Home({ session, exploreData, cardsData }) {
-  if (session) {
+  if (!session) {
     return <Login />;
   }
 
